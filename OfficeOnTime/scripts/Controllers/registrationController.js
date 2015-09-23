@@ -67,6 +67,9 @@ ootApp.controller('RegistrationCtrl', ['$scope', '$rootScope', 'dbService', '$ht
                   SpinnerDialog.hide();
                   $scope.showAlert(error.data.Message);
               })
+
+              dbService.getUser();
+
           };
 
           $scope.getLocation = function () {
